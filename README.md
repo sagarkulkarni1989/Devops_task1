@@ -63,3 +63,13 @@ Task
 	10. cat /etc/os-release   OS information`
 	11. vim index.html    - Add information`
 	12. hit public ip to browser
+2] Write BASH script for installing web server -nginx
+((*installweb.sh*))
+#!/bin/bash
+echo "installing nginx on server"
+yum install epel-release -y
+yum install nginx -y
+systemctl enable nginx
+systemctl start nginx
+echo -e "Hello World" > /usr/share/nginx/html/index.html
+echo " os version is: $(cat /etc/*-release)" >> /usr/share/nginx/html/index.html
