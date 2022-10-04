@@ -43,8 +43,8 @@ Task
 		ssh -i mydevopskey.pem ec2-user@15.207.71.250
 
 5. ping and SSH passed from one instance to another and vice versa. Configure SSH connectivity:
-	login to both instances using default username and create user in both instances
-	create a user : Create ansadmin
+	1. login to both instances using default username and create user in both instances
+	2. create a user : Create ansadmin
 	passwd ansadmin
 	sudo su - ansadmin
 	ssh-keygen
