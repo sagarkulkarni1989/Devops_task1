@@ -34,3 +34,19 @@
 * git merge dev
 * git branch delete sagar-new_feature
 * git push origin --delete sagar-new_feature
+* # ## Task 2: AWS Cloud
+Task 
+1. Done
+2. Done 
+3. Done 
+4. check SSH connection from your host to the created EC2: 
+		ssh -i mydevopskey.pem ec2-user@15.207.71.250
+
+5. ping and SSH passed from one instance to another and vice versa. Configure SSH connectivity:
+* login to both instances using default username and create user in both instances
+* create a user : Create ansadmin
+* passwd ansadmin
+* sudo su - ansadmin
+* ssh-keygen
+* ssh-copy-id ansadnin@targetinstance
+* ssh ansadmin@target machine public IP
