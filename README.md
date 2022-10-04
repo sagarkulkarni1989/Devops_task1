@@ -40,26 +40,26 @@ Task
 2. Done 
 3. Done 
 4. check SSH connection from your host to the created EC2: 
-		ssh -i mydevopskey.pem ec2-user@15.207.71.250
+      1. ssh -i mydevopskey.pem ec2-user@15.207.71.250
 
 5. ping and SSH passed from one instance to another and vice versa. Configure SSH connectivity:
 	1. login to both instances using default username and create user in both instances
 	2. create a user : Create ansadmin
-	passwd ansadmin
-	sudo su - ansadmin
-	ssh-keygen
-	ssh-copy-id ansadnin@targetinstance
- 	ssh ansadmin@target machine public IP
+	3. passwd ansadmin
+	4. sudo su - ansadmin
+	6. ssh-keygen
+	7. ssh-copy-id ansadnin@targetinstance
+ 	8. ssh ansadmin@target machine public IP
 6. Install web server- nginx
-	sudo amazon-linux-extras list | grep epel
-	sudo amazon-linux-extras enable epel
-	sudo yum install epel-release
-	sudo yum install nginx
-	systemctl start nginx
-	systemctl enable nginx
-	systemctl status nginx
-	nginx -v
-	cd /usr/share/nginx/html
-	cat /etc/os-release   OS information`
-	vim index.html    - Add information`
-	hit public ip to browser
+	1. sudo amazon-linux-extras list | grep epel
+	2. sudo amazon-linux-extras enable epel
+	3. sudo yum install epel-release
+	4. sudo yum install nginx
+	5. systemctl start nginx
+	6. systemctl enable nginx
+	7. systemctl status nginx
+	8. nginx -v
+	9. cd /usr/share/nginx/html
+	10. cat /etc/os-release   OS information`
+	11. vim index.html    - Add information`
+	12. hit public ip to browser
