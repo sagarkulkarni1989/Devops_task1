@@ -43,10 +43,23 @@ Task
 		ssh -i mydevopskey.pem ec2-user@15.207.71.250
 
 5. ping and SSH passed from one instance to another and vice versa. Configure SSH connectivity:
-* login to both instances using default username and create user in both instances
-* create a user : Create ansadmin
-* passwd ansadmin
-* sudo su - ansadmin
-* ssh-keygen
-* ssh-copy-id ansadnin@targetinstance
-* ssh ansadmin@target machine public IP
+	login to both instances using default username and create user in both instances
+	create a user : Create ansadmin
+	passwd ansadmin
+	sudo su - ansadmin
+	ssh-keygen
+	ssh-copy-id ansadnin@targetinstance
+ 	ssh ansadmin@target machine public IP
+6. Install web server- nginx
+	sudo amazon-linux-extras list | grep epel
+	sudo amazon-linux-extras enable epel
+	sudo yum install epel-release
+	sudo yum install nginx
+	systemctl start nginx
+	systemctl enable nginx
+	systemctl status nginx
+	nginx -v
+	cd /usr/share/nginx/html
+	cat /etc/os-release   OS information`
+	vim index.html    - Add information`
+	hit public ip to browser
